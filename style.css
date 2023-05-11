@@ -6,3 +6,9 @@ form {
     flex-direction: column;
     gap: 1rem;
 }
+article {
+    width: 200px;
+}
+article img {
+    width: 70%;
+}

@@ -21,6 +21,24 @@ myForm.addEventListener("submit", function(event) {
     } else {
         alert("All fields are required");
     }
+    //MOSTRAR USUARIOS EN DOM
+    //Elementos HTML
+    const uCard = document.createElement("article");
+    const uName = document.createElement("p");
+    const uEmail = document.createElement("p");
+    const uMessage = document.createElement("p");
+    const uImg = document.createElement("img");
+    //Cargo datos desde local store
+    uName.innerHTML = name;
+    uEmail.innerHTML = email;
+    uMessage.innerHTML = message;
+    uImg.src = url;
+    //Pinto sobre el DOM
+    uCard.appendChild(uName);
+    uCard.appendChild(uEmail);
+    uCard.appendChild(uMessage);
+    uCard.appendChild(uImg);
+    document.getElementById("gallery").appendChild(uCard);
 
     for (let i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
